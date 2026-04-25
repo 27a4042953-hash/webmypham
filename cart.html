@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+
+<html class="light" lang="vi"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600&amp;family=Noto+Serif:wght@400;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-tertiary-fixed-variant": "#484743",
+                    "secondary-container": "#e2dfde",
+                    "surface": "#f9f9f9",
+                    "on-tertiary": "#ffffff",
+                    "on-secondary": "#ffffff",
+                    "surface-container-lowest": "#ffffff",
+                    "outline-variant": "#d1c5b4",
+                    "primary": "#775a19",
+                    "inverse-primary": "#e9c176",
+                    "on-primary": "#ffffff",
+                    "surface-bright": "#f9f9f9",
+                    "on-secondary-fixed-variant": "#474746",
+                    "tertiary-fixed": "#e6e2dd",
+                    "on-surface-variant": "#4e4639",
+                    "on-error": "#ffffff",
+                    "secondary-fixed": "#e5e2e1",
+                    "tertiary-fixed-dim": "#c9c6c1",
+                    "inverse-surface": "#2f3131",
+                    "error-container": "#ffdad6",
+                    "surface-container-highest": "#e2e2e2",
+                    "secondary": "#5f5e5e",
+                    "surface-container-low": "#f3f3f4",
+                    "outline": "#7f7667",
+                    "on-surface": "#1a1c1c",
+                    "on-background": "#1a1c1c",
+                    "primary-fixed": "#ffdea5",
+                    "surface-tint": "#775a19",
+                    "surface-variant": "#e2e2e2",
+                    "on-secondary-fixed": "#1c1b1b",
+                    "background": "#f9f9f9",
+                    "error": "#ba1a1a",
+                    "secondary-fixed-dim": "#c8c6c5",
+                    "on-secondary-container": "#636262",
+                    "on-primary-container": "#4e3700",
+                    "tertiary-container": "#a8a5a1",
+                    "on-primary-fixed-variant": "#5d4201",
+                    "tertiary": "#605e5b",
+                    "surface-container-high": "#e8e8e8",
+                    "on-primary-fixed": "#261900",
+                    "surface-container": "#eeeeee",
+                    "inverse-on-surface": "#f0f1f1",
+                    "on-tertiary-container": "#3c3b38",
+                    "primary-fixed-dim": "#e9c176",
+                    "primary-container": "#c5a059",
+                    "on-error-container": "#93000a",
+                    "on-tertiary-fixed": "#1c1c19",
+                    "surface-dim": "#dadada"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "container-max": "1440px",
+                    "margin-edge": "40px",
+                    "base": "8px",
+                    "gutter": "24px",
+                    "section-gap": "80px"
+            },
+            "fontFamily": {
+                    "body-sm": ["Manrope"],
+                    "label-caps": ["Manrope"],
+                    "headline-md": ["Noto Serif"],
+                    "body-lg": ["Manrope"],
+                    "headline-display": ["Noto Serif"],
+                    "cta": ["Manrope"],
+                    "body-md": ["Manrope"],
+                    "headline-lg": ["Noto Serif"]
+            },
+            "fontSize": {
+                    "body-sm": ["14px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                    "label-caps": ["12px", {"lineHeight": "1", "letterSpacing": "0.1em", "fontWeight": "600"}],
+                    "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "400"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "headline-display": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "400"}],
+                    "cta": ["14px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "headline-lg": ["32px", {"lineHeight": "1.2", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .hide-scrollbar::-webkit-scrollbar { display: none; }
+        .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md selection:bg-primary-container selection:text-on-primary-container">
+<!-- Top Navigation Bar (Shared Component) -->
+<nav class="bg-white/95 dark:bg-neutral-950/95 backdrop-blur-md border-b border-neutral-100 dark:border-neutral-800 shadow-[0_2px_15px_rgba(0,0,0,0.02)] fixed top-0 z-50 w-full">
+<div class="max-w-[1440px] mx-auto flex justify-between items-center h-20 px-8 lg:px-16 w-full">
+<a class="text-2xl font-light tracking-[0.2em] text-neutral-900 dark:text-neutral-50" href="index.html">AURA LUXE</a>
+<div class="hidden md:flex gap-10">
+<a class="text-neutral-500 font-serif tracking-tight text-sm uppercase hover:text-neutral-900 transition-all duration-500" href="category.html">Skincare</a>
+<a class="text-neutral-500 font-serif tracking-tight text-sm uppercase hover:text-neutral-900 transition-all duration-500" href="category.html">Makeup</a>
+<a class="text-neutral-500 font-serif tracking-tight text-sm uppercase hover:text-neutral-900 transition-all duration-500" href="category.html">Bodycare</a>
+<a class="text-neutral-500 font-serif tracking-tight text-sm uppercase hover:text-neutral-900 transition-all duration-500" href="category.html">Haircare</a>
+</div>
+<div class="flex items-center gap-6">
+<a class="transition-transform duration-300 active:scale-95 text-neutral-900" href="profile.html">
+<span class="material-symbols-outlined">person</span>
+</a>
+<button class="transition-transform duration-300 active:scale-95 text-neutral-900">
+<span class="material-symbols-outlined">favorite</span>
+</button>
+<a class="transition-transform duration-300 active:scale-95 text-neutral-900 relative" href="cart.html">
+<span class="material-symbols-outlined">shopping_bag</span>
+<span class="absolute -top-2 -right-2 bg-primary text-white text-[10px] w-4 h-4 flex items-center justify-center rounded-full">2</span>
+</a>
+</div>
+</div>
+</nav>
+<main class="pt-32 pb-20 max-w-[1440px] mx-auto px-8 lg:px-16">
+<!-- Stepper -->
+<div class="flex items-center justify-center mb-16 max-w-2xl mx-auto">
+<a class="flex flex-col items-center gap-2 group" href="cart.html">
+<div class="w-8 h-8 rounded-full bg-on-background text-white flex items-center justify-center text-xs font-bold transition-transform group-hover:scale-110">1</div>
+<span class="font-label-caps text-label-caps text-on-background">THÔNG TIN</span>
+</a>
+<div class="flex-1 h-px bg-outline-variant mx-4 -mt-6"></div>
+<a class="flex flex-col items-center gap-2 group" href="#">
+<div class="w-8 h-8 rounded-full border border-outline-variant text-outline flex items-center justify-center text-xs transition-transform group-hover:scale-110">2</div>
+<span class="font-label-caps text-label-caps text-outline">VẬN CHUYỂN</span>
+</a>
+<div class="flex-1 h-px bg-outline-variant mx-4 -mt-6"></div>
+<a class="flex flex-col items-center gap-2 group" href="#">
+<div class="w-8 h-8 rounded-full border border-outline-variant text-outline flex items-center justify-center text-xs transition-transform group-hover:scale-110">3</div>
+<span class="font-label-caps text-label-caps text-outline">THANH TOÁN</span>
+</a>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-16">
+<!-- Left Column: Cart & Details -->
+<div class="lg:col-span-7 space-y-12">
+<!-- Cart Items Section -->
+<section>
+<h2 class="font-headline-md text-headline-md mb-8 border-b border-neutral-100 pb-4 uppercase tracking-widest">Giỏ hàng của bạn (2)</h2>
+<div class="space-y-8">
+<!-- Product Item 1 -->
+<div class="flex gap-6 items-start group">
+<div class="w-32 aspect-[3/4] bg-surface-container overflow-hidden rounded-sm">
+<img alt="Aura Luxe Serum" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Close-up of a minimalist frosted glass skincare serum bottle on a light beige stone surface with soft shadows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuApEB_BWD9IilNNbkgCBzGDBUjiFAFoeoTGxOEy7nPfSThBdweXZpnh6A1-1OrgpA-JE8xFBturMQXgpV7QVmIfju-wwCht5q0ua0UGxcCld6eoFt8zJBOF2etwAVD8Dnm965JvuCQxqFgGyHwDTrK0k7kcfQEXrBWXtTPpBKmJzq92ob-dT3paHNntI5ryoVEMtF9HvXFo_mp0zwoGTUFBpu0VaZhOES3ccA0Yoe8r-k_gh7Mrjx0jAwYwMuFskKJ_40SapxYzL3A"/>
+</div>
+<div class="flex-1 flex flex-col justify-between h-full py-1">
+<div>
+<div class="flex justify-between items-start">
+<a class="font-headline-md text-body-lg text-on-background uppercase tracking-tight hover:text-primary transition-colors" href="product.html">The Radiance Serum</a>
+<button class="text-neutral-400 hover:text-error transition-colors"><span class="material-symbols-outlined">close</span></button>
+</div>
+<p class="font-body-sm text-body-sm text-secondary mt-1">30ml | Phục hồi &amp; Làm sáng</p>
+</div>
+<div class="flex justify-between items-end mt-4">
+<div class="flex items-center border border-outline-variant">
+<button class="px-3 py-1 hover:bg-neutral-50">-</button>
+<span class="px-3 py-1 font-body-sm">1</span>
+<button class="px-3 py-1 hover:bg-neutral-50">+</button>
+</div>
+<p class="font-headline-md text-body-lg text-primary">1.250.000₫</p>
+</div>
+</div>
+</div>
+<!-- Product Item 2 -->
+<div class="flex gap-6 items-start group">
+<div class="w-32 aspect-[3/4] bg-surface-container overflow-hidden rounded-sm">
+<img alt="Aura Luxe Moisturizer" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Minimalist white jar of face cream on a clean reflective surface with a soft cream-colored background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDr-eMXdWyLQkmqDmgN84Y27hgpIlL60Y-E3qAu3TZqp2G8Mq7WjrU--ZiyvjJukRUkqvt1yrFvwtZ3WLD_zqu5ncO6ZPNx8p4rmS9LhFWHPsga4EBaCc2x0BpmfBJoVLX_5wn_8m2sSHDmf3NzKNQnwjm5aMDAo6cXieka69aanHn_8T0Q2kidh2DyPgzlHvu6ZFSJ2BCpNIpft2vAhR7Zt-_knqCiaO31Aga-jgkq2faT0JLl0lynCvHD_H_Mjdyif94itQg8pFE"/>
+</div>
+<div class="flex-1 flex flex-col justify-between h-full py-1">
+<div>
+<div class="flex justify-between items-start">
+<a class="font-headline-md text-body-lg text-on-background uppercase tracking-tight hover:text-primary transition-colors" href="product.html">Velvet Moisture Cream</a>
+<button class="text-neutral-400 hover:text-error transition-colors"><span class="material-symbols-outlined">close</span></button>
+</div>
+<p class="font-body-sm text-body-sm text-secondary mt-1">50ml | Dưỡng ẩm sâu</p>
+</div>
+<div class="flex justify-between items-end mt-4">
+<div class="flex items-center border border-outline-variant">
+<button class="px-3 py-1 hover:bg-neutral-50">-</button>
+<span class="px-3 py-1 font-body-sm">1</span>
+<button class="px-3 py-1 hover:bg-neutral-50">+</button>
+</div>
+<p class="font-headline-md text-body-lg text-primary">950.000₫</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Shipping Info Form -->
+<section class="pt-8 border-t border-neutral-100">
+<h2 class="font-headline-md text-headline-md mb-8 uppercase tracking-widest">Thông tin giao hàng</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="col-span-2">
+<label class="font-label-caps text-label-caps block mb-2">HỌ VÀ TÊN</label>
+<input class="w-full border-b border-outline-variant bg-transparent py-2 focus:border-primary focus:ring-0 transition-colors placeholder:text-neutral-300" placeholder="Nguyễn Văn A" type="text"/>
+</div>
+<div>
+<label class="font-label-caps text-label-caps block mb-2">SỐ ĐIỆN THOẠI</label>
+<input class="w-full border-b border-outline-variant bg-transparent py-2 focus:border-primary focus:ring-0 transition-colors placeholder:text-neutral-300" placeholder="0901 234 567" type="tel"/>
+</div>
+<div>
+<label class="font-label-caps text-label-caps block mb-2">EMAIL</label>
+<input class="w-full border-b border-outline-variant bg-transparent py-2 focus:border-primary focus:ring-0 transition-colors placeholder:text-neutral-300" placeholder="example@email.com" type="email"/>
+</div>
+<div class="col-span-2">
+<label class="font-label-caps text-label-caps block mb-2">ĐỊA CHỈ NHẬN HÀNG</label>
+<input class="w-full border-b border-outline-variant bg-transparent py-2 focus:border-primary focus:ring-0 transition-colors placeholder:text-neutral-300" placeholder="Số nhà, tên đường, Phường/Xã..." type="text"/>
+</div>
+</div>
+</section>
+<!-- Payment Methods -->
+<section class="pt-8 border-t border-neutral-100">
+<h2 class="font-headline-md text-headline-md mb-8 uppercase tracking-widest">Phương thức thanh toán</h2>
+<div class="space-y-4">
+<label class="flex items-center p-4 border border-outline-variant cursor-pointer hover:border-primary transition-colors">
+<input checked="" class="text-primary focus:ring-primary h-4 w-4" name="payment" type="radio"/>
+<span class="ml-4 flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">local_shipping</span>
+<span class="font-body-md">Thanh toán khi nhận hàng (COD)</span>
+</span>
+</label>
+<label class="flex items-center p-4 border border-outline-variant cursor-pointer hover:border-primary transition-colors">
+<input class="text-primary focus:ring-primary h-4 w-4" name="payment" type="radio"/>
+<span class="ml-4 flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">credit_card</span>
+<span class="font-body-md">Thẻ tín dụng / Thẻ ghi nợ (Visa, Mastercard)</span>
+</span>
+</label>
+<label class="flex items-center p-4 border border-outline-variant cursor-pointer hover:border-primary transition-colors">
+<input class="text-primary focus:ring-primary h-4 w-4" name="payment" type="radio"/>
+<span class="ml-4 flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">account_balance_wallet</span>
+<span class="font-body-md">Ví điện tử (Momo, ZaloPay)</span>
+</span>
+</label>
+</div>
+</section>
+</div>
+<!-- Right Column: Order Summary -->
+<div class="lg:col-span-5">
+<div class="sticky top-28 bg-white border border-neutral-100 p-8 shadow-[0_10px_30px_rgba(0,0,0,0.03)]">
+<h2 class="font-headline-md text-headline-md mb-8 uppercase tracking-widest">Tóm tắt đơn hàng</h2>
+<!-- Coupon Input -->
+<div class="mb-8">
+<label class="font-label-caps text-label-caps block mb-2">MÃ GIẢM GIÁ</label>
+<div class="flex gap-2">
+<input class="flex-1 border-b border-outline-variant bg-transparent py-2 focus:border-primary focus:ring-0 transition-colors placeholder:text-neutral-300" placeholder="Nhập mã tại đây..." type="text"/>
+<button class="bg-primary text-white px-6 py-2 font-cta text-cta uppercase tracking-widest hover:opacity-90 transition-opacity">Áp dụng</button>
+</div>
+</div>
+<div class="space-y-4 font-body-md text-secondary">
+<div class="flex justify-between">
+<span>Tạm tính</span>
+<span>2.200.000₫</span>
+</div>
+<div class="flex justify-between">
+<span>Phí vận chuyển</span>
+<span>Miễn phí</span>
+</div>
+<div class="flex justify-between text-primary">
+<span>Giảm giá</span>
+<span>-0₫</span>
+</div>
+<div class="pt-6 border-t border-neutral-100 flex justify-between items-baseline">
+<span class="font-headline-md text-on-background uppercase tracking-wider">Tổng cộng</span>
+<span class="font-headline-lg text-headline-lg text-on-background">2.200.000₫</span>
+</div>
+</div>
+<div class="mt-10 space-y-4">
+<a class="w-full block text-center bg-on-background text-white py-5 font-cta text-cta uppercase tracking-[0.2em] hover:bg-neutral-800 transition-colors" href="index.html">
+                            Hoàn tất thanh toán
+                        </a>
+<p class="text-center font-body-sm text-[11px] text-neutral-400">
+                            Bằng cách đặt hàng, bạn đồng ý với Điều khoản &amp; Chính sách của Aura Luxe.
+                        </p>
+</div>
+<!-- Trust Badges -->
+<div class="mt-8 pt-8 border-t border-neutral-50 grid grid-cols-3 gap-4 text-center">
+<div class="space-y-1">
+<span class="material-symbols-outlined text-primary text-lg" style="font-variation-settings: 'FILL' 1;">verified</span>
+<p class="font-label-caps text-[9px]">CHÍNH HÃNG</p>
+</div>
+<div class="space-y-1">
+<span class="material-symbols-outlined text-primary text-lg" style="font-variation-settings: 'FILL' 1;">lock</span>
+<p class="font-label-caps text-[9px]">BẢO MẬT</p>
+</div>
+<div class="space-y-1">
+<span class="material-symbols-outlined text-primary text-lg" style="font-variation-settings: 'FILL' 1;">package_2</span>
+<p class="font-label-caps text-[9px]">GIAO NHANH</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer (Shared Component) -->
+<footer class="bg-neutral-50 dark:bg-neutral-900 border-t border-neutral-200 dark:border-neutral-800 w-full mt-20">
+<div class="max-w-[1440px] mx-auto py-16 px-8 lg:px-16 grid grid-cols-1 md:grid-cols-4 gap-12">
+<div class="col-span-1 md:col-span-1">
+<a class="text-lg font-light tracking-widest text-neutral-900 dark:text-neutral-50 mb-6 block hover:text-primary transition-colors" href="index.html">AURA LUXE</a>
+<p class="font-serif text-xs tracking-wide text-neutral-500 leading-relaxed">
+                    Trải nghiệm vẻ đẹp tinh tế và hiệu quả vượt trội từ những thành phần quý hiếm nhất.
+                </p>
+</div>
+<div>
+<h4 class="font-serif text-xs tracking-widest uppercase mb-6 text-neutral-900">Khám phá</h4>
+<ul class="space-y-3">
+<li><a class="font-serif text-xs tracking-wide text-neutral-500 hover:text-[#C5A059] transition-colors" href="#">Our Story</a></li>
+<li><a class="font-serif text-xs tracking-wide text-neutral-500 hover:text-[#C5A059] transition-colors" href="#">Shipping &amp; Returns</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-serif text-xs tracking-widest uppercase mb-6 text-neutral-900">Hỗ trợ</h4>
+<ul class="space-y-3">
+<li><a class="font-serif text-xs tracking-wide text-neutral-500 hover:text-[#C5A059] transition-colors" href="#">Contact Us</a></li>
+<li><a class="font-serif text-xs tracking-wide text-neutral-500 hover:text-[#C5A059] transition-colors" href="#">Privacy</a></li>
+<li><a class="font-serif text-xs tracking-wide text-neutral-500 hover:text-[#C5A059] transition-colors" href="#">Terms</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-serif text-xs tracking-widest uppercase mb-6 text-neutral-900">Bản tin</h4>
+<p class="font-serif text-xs tracking-wide text-neutral-500 mb-4">Đăng ký để nhận thông tin ưu đãi độc quyền.</p>
+<div class="flex border-b border-neutral-300 pb-2">
+<input class="bg-transparent border-none p-0 text-xs focus:ring-0 w-full font-serif italic" placeholder="Email của bạn" type="email"/>
+<button class="text-neutral-900 text-xs font-serif tracking-widest uppercase">Gửi</button>
+</div>
+</div>
+</div>
+<div class="max-w-[1440px] mx-auto px-8 lg:px-16 pb-8">
+<div class="font-serif text-xs tracking-wide text-neutral-400 pt-8 border-t border-neutral-100 flex flex-col md:flex-row justify-between gap-4">
+<span>© 2024 AURA LUXE. THE ART OF EFFICACY.</span>
+<div class="flex gap-6">
+<span class="hover:text-primary transition-colors cursor-pointer">Instagram</span>
+<span class="hover:text-primary transition-colors cursor-pointer">Facebook</span>
+<span class="hover:text-primary transition-colors cursor-pointer">TikTok</span>
+</div>
+</div>
+</div>
+</footer>
+</body></html>
