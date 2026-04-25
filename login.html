@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Login / Register - Aura Luxe</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600&amp;family=Noto+Serif:wght@400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-variant": "#e2e2e2",
+                        "secondary": "#5f5e5e",
+                        "background": "#f9f9f9",
+                        "outline": "#7f7667",
+                        "primary-container": "#c5a059",
+                        "on-background": "#1a1c1c",
+                        "surface-container-low": "#f3f3f4",
+                        "tertiary-container": "#a8a5a1",
+                        "surface-dim": "#dadada",
+                        "on-tertiary-fixed-variant": "#484743",
+                        "error": "#ba1a1a",
+                        "tertiary-fixed": "#e6e2dd",
+                        "secondary-fixed": "#e5e2e1",
+                        "primary-fixed-dim": "#e9c176",
+                        "primary": "#775a19",
+                        "outline-variant": "#d1c5b4",
+                        "on-primary-fixed-variant": "#5d4201",
+                        "inverse-primary": "#e9c176",
+                        "on-secondary-fixed-variant": "#474746",
+                        "on-error": "#ffffff",
+                        "surface-container-highest": "#e2e2e2",
+                        "inverse-surface": "#2f3131",
+                        "primary-fixed": "#ffdea5",
+                        "surface-bright": "#f9f9f9",
+                        "on-primary": "#ffffff",
+                        "on-primary-fixed": "#261900",
+                        "surface": "#f9f9f9",
+                        "error-container": "#ffdad6",
+                        "on-surface": "#1a1c1c",
+                        "tertiary-fixed-dim": "#c9c6c1",
+                        "on-secondary-container": "#636262",
+                        "on-error-container": "#93000a",
+                        "on-tertiary": "#ffffff",
+                        "secondary-container": "#e2dfde",
+                        "surface-container-high": "#e8e8e8",
+                        "on-surface-variant": "#4e4639",
+                        "tertiary": "#605e5b",
+                        "on-tertiary-container": "#3c3b38",
+                        "on-tertiary-fixed": "#1c1c19",
+                        "secondary-fixed-dim": "#c8c6c5",
+                        "surface-tint": "#775a19",
+                        "inverse-on-surface": "#f0f1f1",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-container": "#eeeeee",
+                        "on-secondary-fixed": "#1c1b1b",
+                        "on-secondary": "#ffffff",
+                        "on-primary-container": "#4e3700"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "base": "8px",
+                        "gutter": "24px",
+                        "margin-edge": "40px",
+                        "container-max": "1440px",
+                        "section-gap": "80px"
+                    },
+                    "fontFamily": {
+                        "headline-display": ["Noto Serif"],
+                        "body-sm": ["Manrope"],
+                        "label-caps": ["Manrope"],
+                        "body-lg": ["Manrope"],
+                        "headline-md": ["Noto Serif"],
+                        "headline-lg": ["Noto Serif"],
+                        "cta": ["Manrope"],
+                        "body-md": ["Manrope"]
+                    },
+                    "fontSize": {
+                        "headline-display": ["48px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "400" }],
+                        "body-sm": ["14px", { "lineHeight": "1.5", "fontWeight": "400" }],
+                        "label-caps": ["12px", { "lineHeight": "1", "letterSpacing": "0.1em", "fontWeight": "600" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "headline-md": ["24px", { "lineHeight": "1.3", "fontWeight": "400" }],
+                        "headline-lg": ["32px", { "lineHeight": "1.2", "fontWeight": "400" }],
+                        "cta": ["14px", { "lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "500" }],
+                        "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .icon-fill {
+            font-variation-settings: 'FILL' 1;
+        }
+        .icon-thin {
+            font-variation-settings: 'wght' 100;
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body-md min-h-screen flex flex-col antialiased">
+<!-- TopNavBar component suppressed as this is a linear/transactional screen (Login/Register) -->
+<!-- Creating a simplified minimal header for transactional flow -->
+<header class="w-full py-8 px-12 absolute top-0 z-10 flex justify-center">
+<a class="font-serif text-2xl uppercase tracking-[0.3em] text-neutral-900" href="index.html">Aura Luxe</a>
+</header>
+<main class="flex-grow flex flex-col md:flex-row min-h-screen">
+<!-- Image Side (Left) -->
+<div class="hidden md:block md:w-1/2 bg-surface-container-low relative">
+<div class="absolute inset-0 bg-cover bg-center" data-alt="high fashion editorial beauty portrait of a woman with flawless glowing skin and minimal natural makeup, dramatic soft studio lighting, luxurious and elegant mood, neutral background" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDlylEXyGewcY_pwtSPFuFlEx-iQFgh9MCKWzSrx3b5Rz2TTG0oJin-DfOhXfwK-F1Uemcyty-vin6SHCtkyNynclbKe8MP7OSKZW7diU_xT-UAzx_FrUTek_OkgnsrnqdGzLEprRmWBOrqrMdvf8YVCvuwINm7uwxXPMwIJJqNuaiKRyWp1zfRvsxLkcMze2_d6KGKXhdrIGDNAIiItTKyaGTOKHNrcxiuDwqW3sXnlEF02Rz2WVH-N8eTQE_Qg_HKtTqxS7Co8Fk');"></div>
+</div>
+<!-- Form Side (Right) -->
+<div class="w-full md:w-1/2 flex items-center justify-center p-8 md:p-24 bg-surface z-10">
+<div class="w-full max-w-md">
+<div class="text-center mb-12 mt-16 md:mt-0">
+<h1 class="font-headline-lg text-headline-lg mb-4 text-on-surface">Welcome Back</h1>
+<p class="font-body-md text-body-md text-on-surface-variant">Sign in to access your exclusive benefits.</p>
+</div>
+<!-- Form Toggle (Visual only for layout purposes) -->
+<div class="flex border-b border-surface-variant mb-8">
+<button class="flex-1 pb-4 text-center font-cta text-cta uppercase border-b-2 border-primary-container text-primary-container transition-colors duration-300">Sign In</button>
+<button class="flex-1 pb-4 text-center font-cta text-cta uppercase text-on-surface-variant hover:text-on-surface transition-colors duration-300">Create Account</button>
+</div>
+<form class="space-y-6">
+<div class="relative">
+<label class="block font-label-caps text-label-caps text-on-surface-variant uppercase mb-2" for="email">Email Address</label>
+<input class="w-full border-0 border-b border-surface-variant bg-transparent px-0 py-2 focus:ring-0 focus:border-on-surface transition-colors font-body-md text-body-md text-on-surface placeholder-tertiary-fixed-dim" id="email" name="email" placeholder="Enter your email" type="email"/>
+</div>
+<div class="relative">
+<div class="flex justify-between items-end mb-2">
+<label class="block font-label-caps text-label-caps text-on-surface-variant uppercase" for="password">Password</label>
+<a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary-container transition-colors" href="#">Forgot Password?</a>
+</div>
+<input class="w-full border-0 border-b border-surface-variant bg-transparent px-0 py-2 focus:ring-0 focus:border-on-surface transition-colors font-body-md text-body-md text-on-surface placeholder-tertiary-fixed-dim" id="password" name="password" placeholder="Enter your password" type="password"/>
+</div>
+<div class="pt-4">
+<button class="w-full bg-primary-container text-on-primary font-cta text-cta uppercase tracking-widest py-4 px-8 hover:bg-opacity-90 transition-all duration-300 ease-out shadow-[0_10px_30px_rgba(0,0,0,0.05)]" type="submit">
+                            Sign In
+                        </button>
+</div>
+</form>
+</div>
+</div>
+</main>
+<!-- Footer component suppressed as this is a linear/transactional screen (Login/Register) -->
+<!-- Minimal transactional footer -->
+<footer class="w-full py-8 text-center bg-surface border-t border-surface-variant">
+<p class="font-body-sm text-body-sm text-on-surface-variant">© 2024 Aura Luxe. All Rights Reserved.</p>
+</footer>
+</body></html>
