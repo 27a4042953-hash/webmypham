@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Wishlist - Aura Luxe</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600&amp;family=Noto+Serif:wght@400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "surface-variant": "#e2e2e2",
+                      "secondary": "#5f5e5e",
+                      "background": "#f9f9f9",
+                      "outline": "#7f7667",
+                      "primary-container": "#c5a059",
+                      "on-background": "#1a1c1c",
+                      "surface-container-low": "#f3f3f4",
+                      "tertiary-container": "#a8a5a1",
+                      "surface-dim": "#dadada",
+                      "on-tertiary-fixed-variant": "#484743",
+                      "error": "#ba1a1a",
+                      "tertiary-fixed": "#e6e2dd",
+                      "secondary-fixed": "#e5e2e1",
+                      "primary-fixed-dim": "#e9c176",
+                      "primary": "#775a19",
+                      "outline-variant": "#d1c5b4",
+                      "on-primary-fixed-variant": "#5d4201",
+                      "inverse-primary": "#e9c176",
+                      "on-secondary-fixed-variant": "#474746",
+                      "on-error": "#ffffff",
+                      "surface-container-highest": "#e2e2e2",
+                      "inverse-surface": "#2f3131",
+                      "primary-fixed": "#ffdea5",
+                      "surface-bright": "#f9f9f9",
+                      "on-primary": "#ffffff",
+                      "on-primary-fixed": "#261900",
+                      "surface": "#f9f9f9",
+                      "error-container": "#ffdad6",
+                      "on-surface": "#1a1c1c",
+                      "tertiary-fixed-dim": "#c9c6c1",
+                      "on-secondary-container": "#636262",
+                      "on-error-container": "#93000a",
+                      "on-tertiary": "#ffffff",
+                      "secondary-container": "#e2dfde",
+                      "surface-container-high": "#e8e8e8",
+                      "on-surface-variant": "#4e4639",
+                      "tertiary": "#605e5b",
+                      "on-tertiary-container": "#3c3b38",
+                      "on-tertiary-fixed": "#1c1c19",
+                      "secondary-fixed-dim": "#c8c6c5",
+                      "surface-tint": "#775a19",
+                      "inverse-on-surface": "#f0f1f1",
+                      "surface-container-lowest": "#ffffff",
+                      "surface-container": "#eeeeee",
+                      "on-secondary-fixed": "#1c1b1b",
+                      "on-secondary": "#ffffff",
+                      "on-primary-container": "#4e3700"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.125rem",
+                      "lg": "0.25rem",
+                      "xl": "0.5rem",
+                      "full": "0.75rem"
+              },
+              "spacing": {
+                      "base": "8px",
+                      "gutter": "24px",
+                      "margin-edge": "40px",
+                      "container-max": "1440px",
+                      "section-gap": "80px"
+              },
+              "fontFamily": {
+                      "headline-display": [
+                              "Noto Serif"
+                      ],
+                      "body-sm": [
+                              "Manrope"
+                      ],
+                      "label-caps": [
+                              "Manrope"
+                      ],
+                      "body-lg": [
+                              "Manrope"
+                      ],
+                      "headline-md": [
+                              "Noto Serif"
+                      ],
+                      "headline-lg": [
+                              "Noto Serif"
+                      ],
+                      "cta": [
+                              "Manrope"
+                      ],
+                      "body-md": [
+                              "Manrope"
+                      ]
+              },
+              "fontSize": {
+                      "headline-display": [
+                              "48px",
+                              {
+                                      "lineHeight": "1.1",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "body-sm": [
+                              "14px",
+                              {
+                                      "lineHeight": "1.5",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "label-caps": [
+                              "12px",
+                              {
+                                      "lineHeight": "1",
+                                      "letterSpacing": "0.1em",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "body-lg": [
+                              "18px",
+                              {
+                                      "lineHeight": "1.6",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "headline-md": [
+                              "24px",
+                              {
+                                      "lineHeight": "1.3",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "headline-lg": [
+                              "32px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "cta": [
+                              "14px",
+                              {
+                                      "lineHeight": "1",
+                                      "letterSpacing": "0.05em",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "body-md": [
+                              "16px",
+                              {
+                                      "lineHeight": "1.6",
+                                      "fontWeight": "400"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+      </script>
+<style>
+        .flat { box-shadow: none; }
+      </style>
+</head>
+<body class="bg-background text-on-background font-body-md min-h-screen flex flex-col pt-20">
+<!-- TopNavBar (Shared Component) -->
+<header class="fixed top-0 w-full z-50 bg-white/95 dark:bg-neutral-950/95 backdrop-blur-md border-b border-neutral-100 dark:border-neutral-900 shadow-[0_10px_30px_rgba(0,0,0,0.02)] dark:shadow-none transition-colors duration-300">
+<div class="flex justify-between items-center px-12 h-20 max-w-[1440px] mx-auto w-full">
+<nav class="hidden md:flex gap-8">
+<a class="text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-100 font-serif tracking-tight cursor-pointer transition-colors duration-300 hover:text-[#C5A059]" href="category.html">Skincare</a>
+<a class="text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-100 font-serif tracking-tight cursor-pointer transition-colors duration-300 hover:text-[#C5A059]" href="category.html">Makeup</a>
+<a class="text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-100 font-serif tracking-tight cursor-pointer transition-colors duration-300 hover:text-[#C5A059]" href="category.html">Bodycare</a>
+<a class="text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-100 font-serif tracking-tight cursor-pointer transition-colors duration-300 hover:text-[#C5A059]" href="category.html">Haircare</a>
+</nav>
+<a class="font-serif text-2xl uppercase tracking-[0.3em] text-neutral-900 dark:text-neutral-50 absolute left-1/2 transform -translate-x-1/2" href="index.html">Aura Luxe</a>
+<div class="flex items-center gap-6 text-[#C5A059] dark:text-[#C5A059]">
+<a class="cursor-pointer transition-colors duration-300 hover:text-[#C5A059]" href="#">
+<span class="material-symbols-outlined font-light" style="font-variation-settings: 'wght' 200;">person</span>
+</a>
+<a class="cursor-pointer transition-colors duration-300 text-[#C5A059] border-b border-[#C5A059] pb-1" href="wishlist.html">
+<span class="material-symbols-outlined font-light" style="font-variation-settings: 'wght' 200;">favorite</span>
+</a>
+<a class="cursor-pointer transition-colors duration-300 hover:text-[#C5A059]" href="cart.html">
+<span class="material-symbols-outlined font-light" style="font-variation-settings: 'wght' 200;">shopping_bag</span>
+</a>
+</div>
+</div>
+</header>
+<!-- Main Content -->
+<main class="flex-grow max-w-[1440px] mx-auto w-full px-12 py-16">
+<!-- Header Section -->
+<div class="flex justify-between items-end mb-16 border-b border-surface-variant pb-8">
+<div>
+<h1 class="font-headline-display text-headline-display text-on-background mb-4">Your Wishlist</h1>
+<p class="font-body-lg text-body-lg text-secondary">A curated collection of your desired formulations.</p>
+</div>
+<button class="flex items-center gap-2 font-cta text-cta uppercase tracking-widest text-on-background hover:text-primary-container transition-colors duration-300">
+<span class="material-symbols-outlined" style="font-variation-settings: 'wght' 300;">share</span>
+                Share Wishlist
+            </button>
+</div>
+<!-- Wishlist Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+<!-- Product Card 1 -->
+<div class="group flex flex-col bg-surface hover:bg-surface-container-low transition-colors duration-500">
+<div class="relative aspect-[4/5] overflow-hidden mb-6 bg-surface-variant">
+<img alt="Minimalist frosted glass serum bottle on a travertine stone podium with soft morning sunlight casting long elegant shadows." class="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105" data-alt="Minimalist frosted glass serum bottle on a travertine stone podium with soft morning sunlight casting long elegant shadows." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB7prLmnKM4plp_07SKDGn2S1hNaS2v1gnAi00EG4efIXV1nEGU695ElrQ9cT1m9Ksm6mOKWhfQgdDeTPklK7L_AFodWYndPJxgSPEtZ2N9QSu-TbgMOr2NBjqy3gaYtRdVy3v5jra3sEstmwMLrerWzRu1U-yQAmCF_RLsff7-cxbEGcNhSL1EFWgY556PXfdSWyvi30lX4ndN3Cw97n-GPo6NLNhJia73QEO5_AAcVIDGbYinWGxCO8_M9JxLqv7pjN7fExYpH6c"/>
+<button class="absolute top-4 right-4 text-on-background hover:text-primary-container transition-colors z-10 bg-white/50 backdrop-blur-sm p-2 rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">favorite</span>
+</button>
+</div>
+<div class="px-4 pb-6 flex flex-col flex-grow">
+<span class="font-label-caps text-label-caps uppercase text-secondary mb-2">Skincare</span>
+<h3 class="font-headline-md text-headline-md text-on-background mb-2">Luminance Botanical Serum</h3>
+<p class="font-headline-md text-headline-md text-secondary mb-6 mt-auto">$125.00</p>
+<button class="w-full py-4 border border-on-background font-cta text-cta uppercase tracking-widest text-on-background hover:bg-on-background hover:text-surface transition-colors duration-300">Move to Cart</button>
+</div>
+</div>
+<!-- Product Card 2 -->
+<div class="group flex flex-col bg-surface hover:bg-surface-container-low transition-colors duration-500">
+<div class="relative aspect-[4/5] overflow-hidden mb-6 bg-surface-variant">
+<img alt="Sleek black and gold perfume bottle resting on reflective dark glass with subtle warm lighting highlighting the metallic accents." class="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105" data-alt="Sleek black and gold perfume bottle resting on reflective dark glass with subtle warm lighting highlighting the metallic accents." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA74i5ESntG7mccjW8yPSdhDKwscma0UZtmUldNh9Om_ZWrmLo08F4DePva8LBlTu6Hk0vDdHd1nRvQI7flQ19xyLLaw3oR-JV9bLJ4DTBj3HRI_k7O_bqHA33ElxdD9gGWoqaCCEEbiha4BRbdT2ai9TlysjkEsFq-jxZkpHoj0ifepRmuAsd5OGQJmaK6Czs05nS1aPCn-A0QnPZjvLGDkKqrGtM8xYP_kCv0cGcxm5hyLnKA8RSm8MSCmfDK8CVEssiUh5pw5ug"/>
+<button class="absolute top-4 right-4 text-on-background hover:text-primary-container transition-colors z-10 bg-white/50 backdrop-blur-sm p-2 rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">favorite</span>
+</button>
+</div>
+<div class="px-4 pb-6 flex flex-col flex-grow">
+<span class="font-label-caps text-label-caps uppercase text-secondary mb-2">Fragrance</span>
+<h3 class="font-headline-md text-headline-md text-on-background mb-2">Midnight Oud Extrait</h3>
+<p class="font-headline-md text-headline-md text-secondary mb-6 mt-auto">$240.00</p>
+<button class="w-full py-4 border border-on-background font-cta text-cta uppercase tracking-widest text-on-background hover:bg-on-background hover:text-surface transition-colors duration-300">Move to Cart</button>
+</div>
+</div>
+<!-- Product Card 3 -->
+<div class="group flex flex-col bg-surface hover:bg-surface-container-low transition-colors duration-500">
+<div class="relative aspect-[4/5] overflow-hidden mb-6 bg-surface-variant">
+<img alt="Luxurious textured rich face cream swatched perfectly next to a minimalist matte white jar on a pale beige background." class="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105" data-alt="Luxurious textured rich face cream swatched perfectly next to a minimalist matte white jar on a pale beige background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB7ygmq_nt5PQXJ9AmSaE-OM_KLhzmcOFVBqtmpoQWupY3Tt_fUO2H67DVo9MaYLLHWX6DoTgxaZzn9AiSrjG3i0CGJela1i_g-gc-pfpzwChqys5PiZ36mr6blJqS-UoXCeneOHjqvVM_JAVgFg6a5Cf_p5ngN1-6sHZAxvhDFr0-MZlwO364jbgecmfLNXRGa8jQAJ4xLpfnD2yDxOIlzxLdK_SaIzxNsV8f-FEpKQ-8ki1crrbL1u9W8bhT9KIoc7R8oJjQ83kI"/>
+<button class="absolute top-4 right-4 text-on-background hover:text-primary-container transition-colors z-10 bg-white/50 backdrop-blur-sm p-2 rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">favorite</span>
+</button>
+</div>
+<div class="px-4 pb-6 flex flex-col flex-grow">
+<span class="font-label-caps text-label-caps uppercase text-secondary mb-2">Skincare</span>
+<h3 class="font-headline-md text-headline-md text-on-background mb-2">Cellular Renewal Cream</h3>
+<p class="font-headline-md text-headline-md text-secondary mb-6 mt-auto">$185.00</p>
+<button class="w-full py-4 border border-on-background font-cta text-cta uppercase tracking-widest text-on-background hover:bg-on-background hover:text-surface transition-colors duration-300">Move to Cart</button>
+</div>
+</div>
+<!-- Product Card 4 -->
+<div class="group flex flex-col bg-surface hover:bg-surface-container-low transition-colors duration-500">
+<div class="relative aspect-[4/5] overflow-hidden mb-6 bg-surface-variant">
+<img alt="Elegant metallic gold tube of lip treatment resting on a soft silk white fabric with gentle folds and soft studio lighting." class="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105" data-alt="Elegant metallic gold tube of lip treatment resting on a soft silk white fabric with gentle folds and soft studio lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAsyD8mJr3yHbEQQbgwxwt91EeKZDu1C74woPJwy7otP3IzW4GsqUBEQ8cR-2ECjbXN7KDyZX4126agqvqTHBRVqDOTzgBD2o5whIYmGoWPHh_9ZNi2mFjqRTx8RIPWh6bwMhZ3yk8Xu7Nt42NHRCGks_liX3N72-ex3rSWf595gijls8jghFqPROzDAkaIveFE8dRS-jZJyTzg11ipkMlTWBQH_dENrKUNqSWrpcwYS9C2wCsvsuJygf-Hwhiwq2b51-QRD7GKVA0"/>
+<button class="absolute top-4 right-4 text-on-background hover:text-primary-container transition-colors z-10 bg-white/50 backdrop-blur-sm p-2 rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">favorite</span>
+</button>
+</div>
+<div class="px-4 pb-6 flex flex-col flex-grow">
+<span class="font-label-caps text-label-caps uppercase text-secondary mb-2">Makeup</span>
+<h3 class="font-headline-md text-headline-md text-on-background mb-2">Aura Glow Lip Elixir</h3>
+<p class="font-headline-md text-headline-md text-secondary mb-6 mt-auto">$45.00</p>
+<button class="w-full py-4 border border-on-background font-cta text-cta uppercase tracking-widest text-on-background hover:bg-on-background hover:text-surface transition-colors duration-300">Move to Cart</button>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer (Shared Component) -->
+<footer class="bg-neutral-50 dark:bg-neutral-900 border-t border-neutral-200 dark:border-neutral-800 flat w-full py-16 px-12 mt-auto">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 max-w-[1440px] mx-auto text-[#C5A059] dark:text-[#C5A059] font-serif text-sm tracking-wide ease-in-out">
+<div class="col-span-1 md:col-span-1">
+<h2 class="font-serif text-xl uppercase tracking-widest text-neutral-800 dark:text-neutral-200 mb-6">Aura Luxe</h2>
+<p class="text-neutral-500 dark:text-neutral-400 mt-8">© 2024 Aura Luxe. All Rights Reserved.</p>
+</div>
+<div class="col-span-1">
+<h3 class="text-neutral-800 dark:text-neutral-200 uppercase tracking-widest mb-4">Discover</h3>
+<ul class="space-y-3">
+<li><a class="text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-100 transition-colors duration-300" href="#">About Us</a></li>
+<li><a class="text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-100 transition-colors duration-300" href="#">Sustainability</a></li>
+</ul>
+</div>
+<div class="col-span-1">
+<h3 class="text-neutral-800 dark:text-neutral-200 uppercase tracking-widest mb-4">Support</h3>
+<ul class="space-y-3">
+<li><a class="text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-100 transition-colors duration-300" href="#">Shipping &amp; Returns</a></li>
+<li><a class="text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-100 transition-colors duration-300" href="#">Contact</a></li>
+</ul>
+</div>
+<div class="col-span-1">
+<h3 class="text-neutral-800 dark:text-neutral-200 uppercase tracking-widest mb-4">Legal</h3>
+<ul class="space-y-3">
+<li><a class="text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-100 transition-colors duration-300" href="#">Privacy Policy</a></li>
+</ul>
+</div>
+</div>
+</footer>
+</body></html>
