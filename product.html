@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+
+<html class="light" lang="vi"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600&amp;family=Noto+Serif:wght@400;700&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-tertiary-fixed-variant": "#484743",
+                        "secondary-container": "#e2dfde",
+                        "surface": "#f9f9f9",
+                        "on-tertiary": "#ffffff",
+                        "on-secondary": "#ffffff",
+                        "surface-container-lowest": "#ffffff",
+                        "outline-variant": "#d1c5b4",
+                        "primary": "#775a19",
+                        "inverse-primary": "#e9c176",
+                        "on-primary": "#ffffff",
+                        "surface-bright": "#f9f9f9",
+                        "on-secondary-fixed-variant": "#474746",
+                        "tertiary-fixed": "#e6e2dd",
+                        "on-surface-variant": "#4e4639",
+                        "on-error": "#ffffff",
+                        "secondary-fixed": "#e5e2e1",
+                        "tertiary-fixed-dim": "#c9c6c1",
+                        "inverse-surface": "#2f3131",
+                        "error-container": "#ffdad6",
+                        "surface-container-highest": "#e2e2e2",
+                        "secondary": "#5f5e5e",
+                        "surface-container-low": "#f3f3f4",
+                        "outline": "#7f7667",
+                        "on-surface": "#1a1c1c",
+                        "on-background": "#1a1c1c",
+                        "primary-fixed": "#ffdea5",
+                        "surface-tint": "#775a19",
+                        "surface-variant": "#e2e2e2",
+                        "on-secondary-fixed": "#1c1b1b",
+                        "background": "#f9f9f9",
+                        "error": "#ba1a1a",
+                        "secondary-fixed-dim": "#c8c6c5",
+                        "on-secondary-container": "#636262",
+                        "on-primary-container": "#4e3700",
+                        "tertiary-container": "#a8a5a1",
+                        "on-primary-fixed-variant": "#5d4201",
+                        "tertiary": "#605e5b",
+                        "surface-container-high": "#e8e8e8",
+                        "on-primary-fixed": "#261900",
+                        "surface-container": "#eeeeee",
+                        "inverse-on-surface": "#f0f1f1",
+                        "on-tertiary-container": "#3c3b38",
+                        "primary-fixed-dim": "#e9c176",
+                        "primary-container": "#c5a059",
+                        "on-error-container": "#93000a",
+                        "on-tertiary-fixed": "#1c1c19",
+                        "surface-dim": "#dadada"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "container-max": "1440px",
+                        "margin-edge": "40px",
+                        "base": "8px",
+                        "gutter": "24px",
+                        "section-gap": "80px"
+                    },
+                    "fontFamily": {
+                        "body-sm": ["Manrope"],
+                        "label-caps": ["Manrope"],
+                        "headline-md": ["Noto Serif"],
+                        "body-lg": ["Manrope"],
+                        "headline-display": ["Noto Serif"],
+                        "cta": ["Manrope"],
+                        "body-md": ["Manrope"],
+                        "headline-lg": ["Noto Serif"]
+                    },
+                    "fontSize": {
+                        "body-sm": ["14px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                        "label-caps": ["12px", {"lineHeight": "1", "letterSpacing": "0.1em", "fontWeight": "600"}],
+                        "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "400"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "headline-display": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "400"}],
+                        "cta": ["14px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "headline-lg": ["32px", {"lineHeight": "1.2", "fontWeight": "400"}]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .hide-scrollbar::-webkit-scrollbar { display: none; }
+        .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+        .tab-content { display: none; }
+        .tab-content.active { display: block; }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md selection:bg-primary-container/30">
+<!-- Top Navigation Bar (Shared Component) -->
+<header class="bg-white/95 backdrop-blur-md sticky top-0 z-50 border-b border-neutral-100 shadow-[0_2px_15px_rgba(0,0,0,0.02)]">
+<nav class="max-w-[1440px] mx-auto flex justify-between items-center h-20 px-8 lg:px-16 w-full">
+<div class="flex-1 flex gap-8">
+<a class="font-serif tracking-tight text-sm uppercase text-neutral-500 font-normal hover:text-neutral-900 transition-all duration-500 ease-out" href="category.html">Skincare</a>
+<a class="font-serif tracking-tight text-sm uppercase text-neutral-500 font-normal hover:text-neutral-900 transition-all duration-500 ease-out" href="category.html">Makeup</a>
+<a class="font-serif tracking-tight text-sm uppercase text-neutral-500 font-normal hover:text-neutral-900 transition-all duration-500 ease-out" href="category.html">Bodycare</a>
+<a class="font-serif tracking-tight text-sm uppercase text-neutral-500 font-normal hover:text-neutral-900 transition-all duration-500 ease-out" href="category.html">Haircare</a>
+</div>
+<a class="text-2xl font-light tracking-[0.2em] text-neutral-900 hover:opacity-80 transition-opacity" href="index.html">AURA LUXE</a>
+<div class="flex-1 flex justify-end gap-6 items-center">
+<a class="material-symbols-outlined text-neutral-900 transition-transform duration-300 active:scale-95" href="profile.html">person</a>
+<button class="material-symbols-outlined text-neutral-900 transition-transform duration-300 active:scale-95" data-icon="favorite" onclick="window.location.href='wishlist.html'">favorite</button>
+<div class="relative">
+<a class="material-symbols-outlined text-neutral-900 transition-transform duration-300 active:scale-95" href="cart.html">shopping_bag</a>
+<span class="absolute -top-1 -right-1 bg-primary text-white text-[8px] w-3.5 h-3.5 rounded-full flex items-center justify-center">2</span>
+</div>
+</div>
+</nav>
+</header>
+<main class="max-w-[1440px] mx-auto px-8 lg:px-16 py-12">
+<!-- Breadcrumbs -->
+<nav class="flex items-center gap-2 mb-8 text-neutral-500 font-body-sm">
+<a class="hover:text-primary" href="index.html">Home</a>
+<span class="material-symbols-outlined text-xs">chevron_right</span>
+<a class="hover:text-primary" href="category.html">Skincare</a>
+<span class="material-symbols-outlined text-xs">chevron_right</span>
+<span class="text-on-background">Divine Elixir Serum</span>
+</nav>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-16">
+<!-- Left: Gallery -->
+<div class="lg:col-span-7">
+<div class="flex gap-4">
+<!-- Thumbnails -->
+<div class="flex flex-col gap-4 w-20">
+<div class="aspect-square border border-neutral-200 p-1 cursor-pointer hover:border-primary transition-colors">
+<img class="w-full h-full object-cover" data-alt="close-up studio shot of a glass luxury serum bottle with golden pipette on a marble surface" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDdlTju9u-rpZ7dM5iWZzuxW1B7q5VZk0NK_WxrZbLQyX8lDQmh6R7Lmof6v-ZWdUrywrgAzzjnDg1mUE7EFweDFuzbZo37QVNseUFzBXp-Cu8N1PcDjb7ds3qiBC0BHjaScL57rPFrZ1LV0ZpYDFKpdzmgQGdtD9laIK8QFSmlBmkvz8XWvvVo8mk08-PetXcl2sHWzZ5Qo5PVCkBvIQN23vj0_PHuJcMbbiF4zoNAfe3dtHWChrhmcodiuY3QkGUoFARiecv-4Ko"/>
+</div>
+<div class="aspect-square border border-neutral-100 p-1 cursor-pointer hover:border-primary transition-colors">
+<img class="w-full h-full object-cover" data-alt="macro texture of a thick pearlescent serum droplet on a neutral beige background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAoLVn17EbcZWlP87rwgZanWb_RZhnpKcFshQbTmAeINDeYYcxD1igo6aiHg5I1_KS5pTGkSgXpeIqsegIJwJ0qE-qdxvuKqEEGr8E_VtDr5iQ0I9yJbyvyc39saWC0dvrfG1ZW_dz1fy3vnHjBjc8olxhuFZlVETDI31DipsmiwBw505Ovn-kXmGEbigvl_hjpLlNjEqULuK17IdnuIPcqXxSPas5rNJ2ufllkHMBvwp3DX_Cc8H10jlAvuAyYdgU63U0RkSMSNVg"/>
+</div>
+<div class="aspect-square border border-neutral-100 p-1 cursor-pointer hover:border-primary transition-colors">
+<img class="w-full h-full object-cover" data-alt="lifestyle shot of elegant woman applying serum to her cheek with a focused soft lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBmiKouJrm6_Ec64hUZ4diX9AdCk3edb5Ywm21SRfkPlNM4hOTTZzxu3E4RMPazqfJ19EVM-bMzOsDZYjzTl0R8UYDphaW3EB3GkQ5vmcFuyG7rACXBKm_YaVs8JJ2iaPt8-rejv8OBBqQ6R1EE6kVY1ZYRv1J-0RzqMPDuBMpnzDQCJjfpZs2D6YFwm1L1U8LYKRfW61VTd-Phik53ETB0V4QZDiG2qqNbhcHsxtL3G_CvHsUtNY0UtCfdFCUYSLWQAPn_8m_hTIw"/>
+</div>
+<div class="aspect-square border border-neutral-100 p-1 cursor-pointer relative group cursor-pointer overflow-hidden">
+<img class="w-full h-full object-cover opacity-50" data-alt="still life of premium skincare ingredients including white lilies and golden oil drops" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDpGojIePQ6LIq7d5GGoAunjVgf0jlJgWIK62OlW1drYWQ3llqQhjmrWmrZybJj9m2ex7V1FrixfBsElN3-YD9J0GqoVK6SKPHcdTd5stJAwq4K-JS38SwPqrViSrHpYs1l6CCVweALsC_UcNqwuLYuVWt0lrs5cHiktANDypWo3QtUNAjb4aoQypMkkuLVdMYt8AwSUFISYrft4baTAE6K-DCwTAjE-V80DJUE118HnNdp7JcskXq8BjOl3GVGyp4k41vGeu93oAg"/>
+<div class="absolute inset-0 flex items-center justify-center">
+<span class="material-symbols-outlined text-neutral-900" data-icon="play_circle">play_circle</span>
+</div>
+</div>
+</div>
+<!-- Main Image -->
+<div class="flex-1 relative bg-neutral-50 flex items-center justify-center overflow-hidden group">
+<img class="w-full aspect-[4/5] object-cover transition-transform duration-700 group-hover:scale-110" data-alt="high resolution product portrait of Aura Luxe Divine Elixir Serum in a frosted glass bottle" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCY6DvrisOZt79Ld0Wc0C2A4NMFpyAjVLU9RQIw74NcHLaN6XLoJNHfuNyk484kIFq2nmwAlN1WuQinksQy7YvmpeGCBDPqMKVfxqzCpczveaAiC3jF4MJU0IxAdv2_uC8_5B8JGUAPqO5U_rx4BTqLqniCUYgRT7K7271UmiklMJ91X28P5zdCv6DTaWP1w4fPfiD5kk8KL_49u7jT3JMA1uNBCUIIrADQHJ4_eO4xleBEsXC6B-3KJTXg_XXhVdlIt_mR6V6kcSw"/>
+<button class="absolute bottom-6 right-6 bg-white/80 backdrop-blur p-3 rounded-full shadow-lg hover:bg-white transition-colors">
+<span class="material-symbols-outlined text-neutral-700" data-icon="zoom_in">zoom_in</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Right: Product Info -->
+<div class="lg:col-span-5 flex flex-col">
+<div class="mb-2">
+<span class="text-label-caps font-label-caps text-primary tracking-[0.2em]">ADVANCED RECOVERY</span>
+</div>
+<h1 class="text-headline-lg font-headline-lg mb-4">Divine Elixir Serum</h1>
+<div class="flex items-center gap-4 mb-6">
+<div class="flex text-[#C5A059]">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 0;">star</span>
+</div>
+<span class="text-body-sm font-body-sm text-neutral-500">128 Reviews</span>
+</div>
+<div class="mb-8">
+<span class="text-headline-md font-headline-md text-on-surface">2.450.000₫</span>
+</div>
+<p class="text-body-md font-body-md text-secondary mb-8 leading-relaxed">
+                    A transformative treatment that targets the signs of aging at their source. Formulated with our proprietary 24K Gold Complex and rare Alpine botanicals.
+                </p>
+<!-- Variants -->
+<div class="mb-10">
+<label class="block text-label-caps font-label-caps mb-4">VOLUME</label>
+<div class="flex gap-4">
+<button class="px-6 py-2 border border-neutral-900 text-on-surface text-body-sm font-body-sm transition-colors bg-white">30ml</button>
+<button class="px-6 py-2 border border-neutral-200 text-neutral-500 text-body-sm font-body-sm hover:border-neutral-400 transition-colors bg-white">50ml</button>
+<button class="px-6 py-2 border border-neutral-200 text-neutral-500 text-body-sm font-body-sm hover:border-neutral-400 transition-colors bg-white">100ml</button>
+</div>
+</div>
+<!-- Actions -->
+<div class="flex flex-col gap-4 mb-10">
+<a class="w-full bg-neutral-950 text-white py-5 font-cta text-cta tracking-[0.2em] border border-neutral-950 hover:bg-white hover:text-neutral-950 transition-all duration-500 text-center flex items-center justify-center" href="cart.html">
+                        ADD TO BAG
+                    </a>
+<a class="w-full border-2 border-[#C5A059] text-primary py-5 font-cta text-cta tracking-[0.2em] hover:bg-[#C5A059]/5 transition-all duration-500 text-center flex items-center justify-center" href="cart.html">
+                        BUY NOW
+                    </a>
+</div>
+<div class="flex flex-col gap-4 py-8 border-t border-neutral-100 text-body-sm font-body-sm text-neutral-600">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-lg" data-icon="local_shipping">local_shipping</span>
+<span>Complimentary global shipping on orders over 5.000.000₫</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-lg" data-icon="verified">verified</span>
+<span>Dermatologically tested &amp; 100% Vegan</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Tabs Detail -->
+<div class="mt-section-gap border-t border-neutral-100 pt-12" id="product-tabs">
+<div class="flex justify-center gap-12 mb-12 border-b border-neutral-100">
+<button class="tab-trigger pb-6 text-label-caps font-label-caps border-b-2 border-neutral-900 text-neutral-900 tracking-widest" data-target="description">DESCRIPTION</button>
+<button class="tab-trigger pb-6 text-label-caps font-label-caps border-b-2 border-transparent text-neutral-400 hover:text-neutral-600 transition-colors tracking-widest" data-target="ingredients">INGREDIENTS</button>
+<button class="tab-trigger pb-6 text-label-caps font-label-caps border-b-2 border-transparent text-neutral-400 hover:text-neutral-600 transition-colors tracking-widest" data-target="how-to-use">HOW TO USE</button>
+</div>
+<div class="max-w-4xl mx-auto overflow-hidden">
+<!-- Description Tab -->
+<div class="tab-content active" id="description">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+<div>
+<h3 class="text-headline-md font-headline-md mb-6">The Art of Radiance</h3>
+<p class="text-body-md font-body-md text-secondary leading-relaxed mb-4">
+                                The Divine Elixir is more than a serum; it is a ritual of renewal. Each drop is infused with suspended micro-particles of pure gold that reflect light while delivering potent nutrients.
+                            </p>
+<ul class="space-y-3">
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-primary text-xs mt-1" data-icon="fiber_manual_record" style="font-variation-settings: 'FILL' 1;">fiber_manual_record</span>
+<span class="text-body-sm font-body-sm text-on-surface">Reduces fine lines and wrinkles by 32% in 4 weeks</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-primary text-xs mt-1" data-icon="fiber_manual_record" style="font-variation-settings: 'FILL' 1;">fiber_manual_record</span>
+<span class="text-body-sm font-body-sm text-on-surface">Restores skin elasticity and firmness</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-primary text-xs mt-1" data-icon="fiber_manual_record" style="font-variation-settings: 'FILL' 1;">fiber_manual_record</span>
+<span class="text-body-sm font-body-sm text-on-surface">Deeply hydrates for a luminous, dewy finish</span>
+</li>
+</ul>
+</div>
+<div class="aspect-square bg-neutral-100 overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="artistic macro shot of water droplets and bubbles in clear liquid with golden light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCVQvECNu-EWi6Ax12upPxyeWA9Eb56s39DEcPqGUcxw10G08dtWVQEAI3DvcoZptqYIz9CgWG93sQl3iZGejiTcDUB4y96c8sXQ7jxW9xHEAt_v1MEfXPHAqpyxpEqLHhHon1QoWwLGPMq4gBC-HSejzfWOTNVllPbOeQw5Etyy_-02eLKEb0168STsPet0zZUq9z5K0ZxJazFv78mfC34Z27cY6JSTu4BMLpOtkaAS6aHce0expciF2nCs58dE15KahqeC4Uas7w"/>
+</div>
+</div>
+</div>
+<!-- Ingredients Tab -->
+<div class="tab-content" id="ingredients">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
+<div>
+<h3 class="text-headline-md font-headline-md mb-6">Masterfully Crafted</h3>
+<p class="text-body-md font-body-md text-secondary leading-relaxed mb-6">
+                                We believe in full transparency. Our formulas are a blend of nature's finest ingredients and advanced dermatological science.
+                            </p>
+<div class="space-y-6">
+<div>
+<h4 class="text-label-caps font-semibold mb-2">24K GOLD COMPLEX</h4>
+<p class="text-body-sm text-secondary">Suspended pure gold particles that boost collagen and provide instant radiance.</p>
+</div>
+<div>
+<h4 class="text-label-caps font-semibold mb-2">ALPINE ROSE STEM CELLS</h4>
+<p class="text-body-sm text-secondary">Enhances the skin barrier function and helps skin cope with environmental stress.</p>
+</div>
+<div>
+<h4 class="text-label-caps font-semibold mb-2">HYALURONIC ACID (TRIPLE WEIGHT)</h4>
+<p class="text-body-sm text-secondary">Deeply hydrates across multiple layers of the dermis for long-lasting plumpness.</p>
+</div>
+</div>
+</div>
+<div class="bg-neutral-50 p-8 border border-neutral-100">
+<h4 class="text-label-caps mb-4">FULL INGREDIENTS LIST</h4>
+<p class="text-xs font-serif leading-loose text-neutral-500 uppercase tracking-wider">
+                                Aqua (Water), Glycerin, Propanediol, Gold, Rosa Damascena Flower Water, Sodium Hyaluronate, Rhododendron Ferrugineum Leaf Cell Culture Extract, Niacinamide, Panthenol, Allantoin, Ethylhexylglycerin, Phenoxyethanol, Isomalt, Lecithin, Mica, CI 77891 (Titanium Dioxide), CI 77491 (Iron Oxides).
+                            </p>
+</div>
+</div>
+</div>
+<!-- How To Use Tab -->
+<div class="tab-content" id="how-to-use">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+<div>
+<h3 class="text-headline-md font-headline-md mb-6">A Daily Ritual</h3>
+<div class="space-y-8">
+<div class="flex gap-6">
+<span class="text-headline-lg text-primary/30 font-serif">01</span>
+<div>
+<h4 class="font-bold text-body-md mb-1">Preparation</h4>
+<p class="text-body-sm text-secondary">Cleanse and tone your skin. Ensure your face is slightly damp for optimal absorption.</p>
+</div>
+</div>
+<div class="flex gap-6">
+<span class="text-headline-lg text-primary/30 font-serif">02</span>
+<div>
+<h4 class="font-bold text-body-md mb-1">Application</h4>
+<p class="text-body-sm text-secondary">Dispense 3-4 drops onto your fingertips. Gently press the serum into your skin using upward motions.</p>
+</div>
+</div>
+<div class="flex gap-6">
+<span class="text-headline-lg text-primary/30 font-serif">03</span>
+<div>
+<h4 class="font-bold text-body-md mb-1">Absorption</h4>
+<p class="text-body-sm text-secondary">Allow 30 seconds for the serum to fully penetrate before applying your moisturizer.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="aspect-video bg-neutral-100 flex items-center justify-center relative overflow-hidden group cursor-pointer">
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" data-alt="close up of hands performing a facial massage during skincare application" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDpGojIePQ6LIq7d5GGoAunjVgf0jlJgWIK62OlW1drYWQ3llqQhjmrWmrZybJj9m2ex7V1FrixfBsElN3-YD9J0GqoVK6SKPHcdTd5stJAwq4K-JS38SwPqrViSrHpYs1l6CCVweALsC_UcNqwuLYuVWt0lrs5cHiktANDypWo3QtUNAjb4aoQypMkkuLVdMYt8AwSUFISYrft4baTAE6K-DCwTAjE-V80DJUE118HnNdp7JcskXq8BjOl3GVGyp4k41vGeu93oAg"/>
+<div class="absolute inset-0 flex items-center justify-center">
+<div class="w-16 h-16 rounded-full bg-white/90 backdrop-blur flex items-center justify-center shadow-xl group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-neutral-900" data-icon="play_arrow">play_arrow</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Reviews Section -->
+<section class="mt-section-gap">
+<div class="flex justify-between items-end mb-12">
+<div>
+<h2 class="text-headline-lg font-headline-lg mb-2">Customer Voices</h2>
+<div class="flex items-center gap-4">
+<span class="text-headline-md font-headline-md">4.8</span>
+<div class="flex text-primary">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star_half</span>
+</div>
+<span class="text-body-sm font-body-sm text-neutral-500">Based on 128 reviews</span>
+</div>
+</div>
+<button class="px-8 py-3 border border-neutral-900 text-label-caps font-label-caps hover:bg-neutral-900 hover:text-white transition-all duration-300">WRITE A REVIEW</button>
+</div>
+<!-- Reviews Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Review Card -->
+<div class="bg-white p-8 border border-neutral-100 shadow-sm">
+<div class="flex items-center gap-4 mb-6">
+<div class="w-12 h-12 rounded-full overflow-hidden bg-neutral-200">
+<img class="w-full h-full object-cover" data-alt="portrait of a smiling woman with glowing skin" src="https://lh3.googleusercontent.com/aida-public/AB6AXuALvYggPks1xP4P7dqEWLtIJFt56uxipK7cuP2EePNFEAWDjXLAXMUm8QqWXV6iMfaGvgoZf_-NrEWMgSr1epv5N3GgSzHzXrl2_ivo8TzfMXoUrntKRn0kgJz0Aatx446GmGLh37_4WNHn3B_5fP1iiRYRWB-q5hspAu1vPpESMvWSEpjG46_pQKITcNM_qp48R7tVLj6mWBd2qd4MxxMndVSxNvC6S6WtTGPKtTfGjNGaOl9R0NWegWFePY0h4p9pLaXU06QQ3KQ"/>
+</div>
+<div>
+<p class="font-body-md font-medium text-on-surface">Minh Anh P.</p>
+<p class="text-xs text-neutral-400">Verified Buyer</p>
+</div>
+</div>
+<div class="flex text-primary mb-4">
+<span class="material-symbols-outlined text-xs" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-xs" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-xs" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-xs" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-xs" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<h4 class="font-headline-md text-sm mb-3">Absolute Magic for my skin</h4>
+<p class="text-body-sm font-body-sm text-secondary leading-relaxed mb-6">
+                        "I have tried many luxury serums, but nothing compares to the Divine Elixir. My skin feels incredibly firm and has a glow I haven't seen in years."
+                    </p>
+<div class="grid grid-cols-2 gap-2">
+<div class="aspect-square bg-neutral-100 overflow-hidden">
+<img class="w-full h-full object-cover grayscale" data-alt="real user photo of the serum bottle on a bathroom vanity with soft morning light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAYYbK6FmFu8iI5iSZxZ8XyTmVYah1UZEf7BgMwizxymLZ0wYQtEsGenxhxAZvNlO0cpPYxipymcjiVdVcQnCR2IjQb-7wgnstP4jA0yG-rnMK3rWSdyMk6p8bHluAqxwGanR1hoFMZo0OUmYZ9HfaEyE7axLJvUwwR60hrI5CTOvDq98XAcMaykh4dipSOoNjtr5p5XUOuutKgl0sIQ5y-KKGxB6VCd41pO01zyev-S9jKlL9FJ4JdbjWY8dwGxLQamt09GUtdI-8"/>
+</div>
+</div>
+</div>
+<!-- Review Card 2 -->
+<div class="bg-white p-8 border border-neutral-100 shadow-sm">
+<div class="flex items-center gap-4 mb-6">
+<div class="w-12 h-12 rounded-full overflow-hidden bg-neutral-200">
+<div class="w-full h-full flex items-center justify-center bg-primary text-white text-lg">H</div>
+</div>
+<div>
+<p class="font-body-md font-medium text-on-surface">Hoang L.</p>
+<p class="text-xs text-neutral-400">Verified Buyer</p>
+</div>
+</div>
+<div class="flex text-primary mb-4">
+<span class="material-symbols-outlined text-xs" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-xs" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-xs" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-xs" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-xs" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<h4 class="font-headline-md text-sm mb-3">Worth every penny</h4>
+<p class="text-body-sm font-body-sm text-secondary leading-relaxed mb-6">
+                        "The texture is beautiful and it absorbs instantly. I love the subtle scent and the packaging is stunning on my vanity."
+                    </p>
+</div>
+<!-- Review Card 3 -->
+<div class="bg-white p-8 border border-neutral-100 shadow-sm">
+<div class="flex items-center gap-4 mb-6">
+<div class="w-12 h-12 rounded-full overflow-hidden bg-neutral-200">
+<img class="w-full h-full object-cover" data-alt="portrait of a man with clean healthy skin" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAIFyv7-DBgHzLrD4hg1JHj7JXzMOmiUQvsVaCzaTIe_sHoO3WKuNGMB3OeB8Ph6Zb2rUJoSMJSEdX6pahA0upsOkOrB810ikQAJmCbJCudbd6IYz8oirUxAg4hZKIoZcamhmI4ID11wU59sUHDV2ZxA9Fr9cHnWOPQm7oOpZfPTs84usRcA8vY-7X8_EZBdhVx0YY6BGJ2-dZZnVglvLuLCEUKiz8Uq3wvC9iYptMz6C2Q0eDVaifnavZGWKtJzK8N9DJU4WRZ_S8"/>
+</div>
+<div>
+<p class="font-body-md font-medium text-on-surface">Alex Nguyen</p>
+<p class="text-xs text-neutral-400">Verified Buyer</p>
+</div>
+</div>
+<div class="flex text-primary mb-4">
+<span class="material-symbols-outlined text-xs" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-xs" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-xs" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-xs" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-xs" style="font-variation-settings: 'FILL' 0;">star</span>
+</div>
+<h4 class="font-headline-md text-sm mb-3">Visible improvement</h4>
+<p class="text-body-sm font-body-sm text-secondary leading-relaxed mb-6">
+                        "Used it for 2 weeks and can already see a difference in skin texture. Very happy with the purchase."
+                    </p>
+<div class="grid grid-cols-2 gap-2">
+<div class="aspect-square bg-neutral-100 overflow-hidden">
+<img class="w-full h-full object-cover grayscale" data-alt="close up of a hand holding a gold pipette serum dropper" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAMcOHZSuCmkLd_ZPnktTxh-y-SmD5QJvSyCscg08qAQVSoQ4HjPopgciSIheNkOfJK-1wIpby5J-UF7ZI-fBqEwobIBmAM2f7TSy6J5gd7cRsJ3faZKP0UXBWbHN9xR-OOlfcuI11yDDzpTAHkn_iFC04RFonJgRlSMRL8qxYTGf0Ry1lIwvofgpOdQiWwHomij_kniteHADODOZHPH5Ml9J0A3X0sgmfzrKWXLQEql4qsVQPhCNWPeZLWWqqBc3LJtRZDPeUlLZg"/>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-12 text-center">
+<button class="text-label-caps font-label-caps text-on-surface border-b border-neutral-900 pb-1 hover:text-primary hover:border-primary transition-colors">VIEW ALL 128 REVIEWS</button>
+</div>
+</section>
+<!-- Related Products -->
+<section class="mt-section-gap mb-20">
+<h2 class="text-headline-lg font-headline-lg mb-12 text-center">Perfect Complements</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+<!-- Related 1 -->
+<div class="group cursor-pointer" onclick="window.location.href='product.html'">
+<div class="aspect-[3/4] overflow-hidden bg-neutral-50 mb-6 relative">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="elegant white cream jar in soft natural lighting with shadows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBaS4DekSZ8RcVYhLWgKgyJqaSc-s1TsZCpMndIOAgcGOk42UJADZXtySt4bwt4C3f84pG8WkZn-55DeknQToxt5gMcZgSA7FniESlZ_GWlGz4ghyFKzEof0W4P5Y_L70CLNHNPdOjPY4mjojHRfNKuDjO23o55l_V7hDZ_VkICK3EnQCgW03NmimbihgLko6LO3LMarZXmxhy4dA6pw0PsrC5oGFQBtdd2lm2nKJ97j7376qa7YUptWEGn-CpVFF8725b3hBEWcSk"/>
+<button class="absolute bottom-4 left-4 right-4 bg-white/90 py-3 text-label-caps font-label-caps opacity-0 group-hover:opacity-100 transition-opacity duration-300">QUICK ADD</button>
+</div>
+<p class="text-label-caps font-label-caps text-primary mb-2">MOISTURIZER</p>
+<h3 class="text-body-md font-body-md mb-2">Luminous Night Cream</h3>
+<p class="text-body-sm font-body-sm text-on-surface">3.200.000₫</p>
+</div>
+<!-- Related 2 -->
+<div class="group cursor-pointer" onclick="window.location.href='product.html'">
+<div class="aspect-[3/4] overflow-hidden bg-neutral-50 mb-6 relative">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="clear glass cleanser bottle with minimalistic label and black pump" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAub3aeZI803L0Ja3V2WWiauvSnVadfsFO_suq6Y0WkeRozBWVIUMyw5KHc7Rvcy7kDd-DIdQ2tJLkJi5Z5aGhzlyKkUU5dQhXCHF_Gn6EzAAv660Wzhiz6oSff1hvv-Rgjz_2ZuRTF8Z-mxVAQeIq2v28W4YvVorXb8DiVyWIupjnx67YHGMK14-RGcSSzI7KDN9OifavrOzYzogMvpVz1bqGk_yrG7FU5M6je9vjcbV8gv2He2dRZBHVHrNu35QQNV_P-DkB0YHY"/>
+<button class="absolute bottom-4 left-4 right-4 bg-white/90 py-3 text-label-caps font-label-caps opacity-0 group-hover:opacity-100 transition-opacity duration-300">QUICK ADD</button>
+</div>
+<p class="text-label-caps font-label-caps text-primary mb-2">CLEANSER</p>
+<h3 class="text-body-md font-body-md mb-2">Gentle Gold Cleansing Gel</h3>
+<p class="text-body-sm font-body-sm text-on-surface">1.850.000₫</p>
+</div>
+<!-- Related 3 -->
+<div class="group cursor-pointer" onclick="window.location.href='product.html'">
+<div class="aspect-[3/4] overflow-hidden bg-neutral-50 mb-6 relative">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="sleek eye cream tube with a golden metallic applicator tip" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC9nw6y3wn0ZZHoo79RdW8KQtJ7rIm-Ce24ZuiaIaKhr_dsOZ03bIft2jcHilQQNsoE1kfYpjuBSrp8CakjhwY1vBtWN_J-iYeu-F6rndqUciQtyRrdg4khsxWUb-fTe2ZcbCSR_zj0FYpm0fBnXuGnIIXNFMVWn5EsNIXfZoAuubwc6Tg0VfoZ1jRD3epbX7X9BCyXAFS32kAOXIQhTznipJfhJue065q0XqknVfp_gnCtWwAdy5K2X9X1hsgc43nI5LkZjbrk-Gg"/>
+<button class="absolute bottom-4 left-4 right-4 bg-white/90 py-3 text-label-caps font-label-caps opacity-0 group-hover:opacity-100 transition-opacity duration-300">QUICK ADD</button>
+</div>
+<p class="text-label-caps font-label-caps text-primary mb-2">EYE CARE</p>
+<h3 class="text-body-md font-body-md mb-2">Alpine Eye Lift Concentrate</h3>
+<p class="text-body-sm font-body-sm text-on-surface">2.100.000₫</p>
+</div>
+<!-- Related 4 -->
+<div class="group cursor-pointer" onclick="window.location.href='product.html'">
+<div class="aspect-[3/4] overflow-hidden bg-neutral-50 mb-6 relative">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="mist spray bottle with delicate water droplets on the exterior" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAvw4KyYH3M1V6DYtxqarstB8zQqHa5mccbgQf0pSV75pAcAV3Wi8AdM20OWhqFGdBs4Gothsr1EtQh7NBEkQJ7QgLk6awiX4Oy0hHtOtrn5rhS5E5aQhnmyFGSXSWLZom2pEiVlUOaSALlensE_9n5EdqKcwmC0-iBClJkLvzoiedCgYeey0LlfeWyKqKBMDsAeF5gJi_774ngTBbPeKw1t3bRIGHv5Hxkk6qmoDeBQyEawc7bm86Cb8l0TNU5uDCAd0hv_w6TiXk"/>
+<button class="absolute bottom-4 left-4 right-4 bg-white/90 py-3 text-label-caps font-label-caps opacity-0 group-hover:opacity-100 transition-opacity duration-300">QUICK ADD</button>
+</div>
+<p class="text-label-caps font-label-caps text-primary mb-2">TONER</p>
+<h3 class="text-body-md font-body-md mb-2">Rose Essence Hydrating Mist</h3>
+<p class="text-body-sm font-body-sm text-on-surface">1.450.000₫</p>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer (Shared Component) -->
+<footer class="bg-neutral-50 border-t border-neutral-200">
+<div class="max-w-[1440px] mx-auto py-16 px-8 lg:px-16 grid grid-cols-1 md:grid-cols-4 gap-12">
+<div class="col-span-1 md:col-span-1">
+<a class="text-lg font-light tracking-widest text-neutral-900 mb-6 block hover:text-primary transition-colors" href="index.html">AURA LUXE</a>
+<p class="text-neutral-500 font-serif text-xs leading-relaxed max-w-xs">
+                    The intersection of high-science and sensory indulgence. Professional-grade results for the modern connoisseur.
+                </p>
+</div>
+<div>
+<h4 class="font-label-caps text-xs tracking-widest text-neutral-900 mb-6 uppercase">Collections</h4>
+<ul class="space-y-4">
+<li><a class="font-serif text-xs tracking-wide text-neutral-500 hover:text-[#C5A059] transition-colors" href="category.html">Advanced Repair</a></li>
+<li><a class="font-serif text-xs tracking-wide text-neutral-500 hover:text-[#C5A059] transition-colors" href="category.html">24K Gold Line</a></li>
+<li><a class="font-serif text-xs tracking-wide text-neutral-500 hover:text-[#C5A059] transition-colors" href="category.html">Hydration Series</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-caps text-xs tracking-widest text-neutral-900 mb-6 uppercase">Customer Care</h4>
+<ul class="space-y-4">
+<li><a class="font-serif text-xs tracking-wide text-neutral-500 hover:text-[#C5A059] transition-colors" href="journal.html">Our Story</a></li>
+<li><a class="font-serif text-xs tracking-wide text-neutral-500 hover:text-[#C5A059] transition-colors" href="profile.html">Shipping &amp; Returns</a></li>
+<li><a class="font-serif text-xs tracking-wide text-neutral-500 hover:text-[#C5A059] transition-colors" href="profile.html">Contact Us</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-caps text-xs tracking-widest text-neutral-900 mb-6 uppercase">Legal</h4>
+<ul class="space-y-4">
+<li><a class="font-serif text-xs tracking-wide text-neutral-500 hover:text-[#C5A059] transition-colors" href="index.html">Privacy</a></li>
+<li><a class="font-serif text-xs tracking-wide text-neutral-500 hover:text-[#C5A059] transition-colors" href="index.html">Terms</a></li>
+</ul>
+</div>
+</div>
+<div class="max-w-[1440px] mx-auto px-8 lg:px-16 pb-12">
+<div class="pt-8 border-t border-neutral-200 flex flex-col md:flex-row justify-between items-center gap-4">
+<div class="font-serif text-xs tracking-wide text-neutral-500 uppercase">© 2024 AURA LUXE. THE ART OF EFFICACY.</div>
+<div class="flex gap-6">
+<a class="material-symbols-outlined text-neutral-500 hover:text-primary transition-colors text-xl" href="#">brand_facebook</a>
+<a class="material-symbols-outlined text-neutral-500 hover:text-primary transition-colors text-xl" href="#">star_rate</a>
+<a class="material-symbols-outlined text-neutral-500 hover:text-primary transition-colors text-xl" href="#">chat_bubble</a>
+</div>
+</div>
+</div>
+</footer>
+<script>
+    $(document).ready(function() {
+        $('.tab-trigger').on('click', function() {
+            const target = $(this).data('target');
+            
+            // Update Tab Triggers
+            $('.tab-trigger').removeClass('border-neutral-900 text-neutral-900').addClass('border-transparent text-neutral-400');
+            $(this).removeClass('border-transparent text-neutral-400').addClass('border-neutral-900 text-neutral-900');
+            
+            // Switch Content with a smooth fade
+            $('.tab-content.active').fadeOut(200, function() {
+                $(this).removeClass('active');
+                $('#' + target).fadeIn(300).addClass('active');
+            });
+        });
+    });
+</script>
+</body></html>
