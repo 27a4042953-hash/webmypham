@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Aura Luxe - My Account</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600&amp;family=Noto+Serif:wght@400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-variant": "#e2e2e2",
+                    "secondary": "#5f5e5e",
+                    "background": "#f9f9f9",
+                    "outline": "#7f7667",
+                    "primary-container": "#c5a059",
+                    "on-background": "#1a1c1c",
+                    "surface-container-low": "#f3f3f4",
+                    "tertiary-container": "#a8a5a1",
+                    "surface-dim": "#dadada",
+                    "on-tertiary-fixed-variant": "#484743",
+                    "error": "#ba1a1a",
+                    "tertiary-fixed": "#e6e2dd",
+                    "secondary-fixed": "#e5e2e1",
+                    "primary-fixed-dim": "#e9c176",
+                    "primary": "#775a19",
+                    "outline-variant": "#d1c5b4",
+                    "on-primary-fixed-variant": "#5d4201",
+                    "inverse-primary": "#e9c176",
+                    "on-secondary-fixed-variant": "#474746",
+                    "on-error": "#ffffff",
+                    "surface-container-highest": "#e2e2e2",
+                    "inverse-surface": "#2f3131",
+                    "primary-fixed": "#ffdea5",
+                    "surface-bright": "#f9f9f9",
+                    "on-primary": "#ffffff",
+                    "on-primary-fixed": "#261900",
+                    "surface": "#f9f9f9",
+                    "error-container": "#ffdad6",
+                    "on-surface": "#1a1c1c",
+                    "tertiary-fixed-dim": "#c9c6c1",
+                    "on-secondary-container": "#636262",
+                    "on-error-container": "#93000a",
+                    "on-tertiary": "#ffffff",
+                    "secondary-container": "#e2dfde",
+                    "surface-container-high": "#e8e8e8",
+                    "on-surface-variant": "#4e4639",
+                    "tertiary": "#605e5b",
+                    "on-tertiary-container": "#3c3b38",
+                    "on-tertiary-fixed": "#1c1c19",
+                    "secondary-fixed-dim": "#c8c6c5",
+                    "surface-tint": "#775a19",
+                    "inverse-on-surface": "#f0f1f1",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-container": "#eeeeee",
+                    "on-secondary-fixed": "#1c1b1b",
+                    "on-secondary": "#ffffff",
+                    "on-primary-container": "#4e3700"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "base": "8px",
+                    "gutter": "24px",
+                    "margin-edge": "40px",
+                    "container-max": "1440px",
+                    "section-gap": "80px"
+            },
+            "fontFamily": {
+                    "headline-display": ["Noto Serif"],
+                    "body-sm": ["Manrope"],
+                    "label-caps": ["Manrope"],
+                    "body-lg": ["Manrope"],
+                    "headline-md": ["Noto Serif"],
+                    "headline-lg": ["Noto Serif"],
+                    "cta": ["Manrope"],
+                    "body-md": ["Manrope"]
+            },
+            "fontSize": {
+                    "headline-display": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "400"}],
+                    "body-sm": ["14px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                    "label-caps": ["12px", {"lineHeight": "1", "letterSpacing": "0.1em", "fontWeight": "600"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "400"}],
+                    "headline-lg": ["32px", {"lineHeight": "1.2", "fontWeight": "400"}],
+                    "cta": ["14px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}]
+            }
+          }
+        }
+      }
+    </script>
+</head>
+<body class="bg-background text-on-background font-body-md text-body-md antialiased min-h-screen flex flex-col">
+<!-- TopNavBar Component -->
+<header class="fixed top-0 w-full z-50 bg-white/95 dark:bg-neutral-950/95 backdrop-blur-md border-b border-neutral-100 dark:border-neutral-900 shadow-[0_10px_30px_rgba(0,0,0,0.02)] dark:shadow-none">
+<div class="flex justify-between items-center px-12 h-20 max-w-[1440px] mx-auto w-full">
+<nav class="hidden md:flex space-x-8">
+<a class="text-neutral-500 dark:text-neutral-400 hover:text-[#C5A059] hover:text-neutral-900 dark:hover:text-neutral-100 transition-all duration-500 ease-out cursor-pointer font-serif tracking-tight" href="category.html">Skincare</a>
+<a class="text-neutral-500 dark:text-neutral-400 hover:text-[#C5A059] hover:text-neutral-900 dark:hover:text-neutral-100 transition-all duration-500 ease-out cursor-pointer font-serif tracking-tight" href="category.html">Makeup</a>
+<a class="text-neutral-500 dark:text-neutral-400 hover:text-[#C5A059] hover:text-neutral-900 dark:hover:text-neutral-100 transition-all duration-500 ease-out cursor-pointer font-serif tracking-tight" href="category.html">Bodycare</a>
+<a class="text-neutral-500 dark:text-neutral-400 hover:text-[#C5A059] hover:text-neutral-900 dark:hover:text-neutral-100 transition-all duration-500 ease-out cursor-pointer font-serif tracking-tight" href="category.html">Haircare</a>
+</nav>
+<a class="font-serif text-2xl uppercase tracking-[0.3em] text-neutral-900 dark:text-neutral-50 absolute left-1/2 -translate-x-1/2" href="index.html">
+                Aura Luxe
+            </a>
+<div class="flex items-center space-x-6 text-[#C5A059] dark:text-[#C5A059]">
+<a class="cursor-pointer transition-colors duration-300 hover:text-[#C5A059]" href="profile.html">
+<span class="material-symbols-outlined font-light">person</span>
+</a>
+<button class="cursor-pointer transition-colors duration-300 hover:text-[#C5A059]">
+<span class="material-symbols-outlined font-light">favorite</span>
+</button>
+<button class="cursor-pointer transition-colors duration-300 hover:text-[#C5A059]">
+<span class="material-symbols-outlined font-light">shopping_bag</span>
+</button>
+</div>
+</div>
+</header>
+<!-- Main Content -->
+<main class="flex-grow pt-32 pb-section-gap px-margin-edge max-w-container-max mx-auto w-full grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<!-- Side Navigation -->
+<aside class="md:col-span-3 space-y-8">
+<h1 class="font-headline-lg text-headline-lg text-on-background mb-8">My Account</h1>
+<nav class="flex flex-col space-y-4">
+<a class="font-cta text-cta text-primary-container flex items-center justify-between border-b border-surface-variant pb-2 transition-all duration-300" href="#">
+<span class="uppercase tracking-widest">Order History</span>
+<span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+<a class="font-cta text-cta text-secondary hover:text-primary-container flex items-center justify-between border-b border-surface-variant pb-2 transition-all duration-300" href="#">
+<span class="uppercase tracking-widest">Personal Info</span>
+</a>
+<a class="font-cta text-cta text-secondary hover:text-primary-container flex items-center justify-between border-b border-surface-variant pb-2 transition-all duration-300" href="#">
+<span class="uppercase tracking-widest">Wishlist</span>
+</a>
+<a class="font-cta text-cta text-secondary hover:text-primary-container flex items-center justify-between border-b border-surface-variant pb-2 transition-all duration-300" href="#">
+<span class="uppercase tracking-widest">Addresses</span>
+</a>
+<button class="font-cta text-cta text-secondary hover:text-error text-left pt-4 transition-all duration-300 uppercase tracking-widest">
+                    Log Out
+                </button>
+</nav>
+</aside>
+<!-- Main Area: Order History -->
+<section class="md:col-span-9 space-y-12">
+<header class="flex justify-between items-end border-b border-surface-variant pb-4">
+<h2 class="font-headline-md text-headline-md text-on-background">Order History</h2>
+<span class="font-body-sm text-body-sm text-secondary">Showing recent orders</span>
+</header>
+<!-- Order List Bento/Grid Style -->
+<div class="grid grid-cols-1 gap-8">
+<!-- Order Card 1 -->
+<article class="bg-surface-container-lowest rounded-DEFAULT p-8 shadow-[0_10px_30px_rgba(0,0,0,0.03)] border border-surface-variant flex flex-col md:flex-row gap-8 items-start hover:shadow-[0_15px_40px_rgba(0,0,0,0.06)] transition-shadow duration-500 ease-out">
+<div class="flex-grow space-y-6 w-full">
+<div class="flex justify-between items-start border-b border-surface-variant pb-4">
+<div>
+<p class="font-label-caps text-label-caps text-secondary mb-1">Order #AL-84729</p>
+<p class="font-body-sm text-body-sm text-on-background">Placed on October 12, 2023</p>
+</div>
+<div class="text-right">
+<p class="font-headline-md text-headline-md text-on-background">$245.00</p>
+<span class="inline-block mt-2 px-3 py-1 bg-surface-variant text-on-surface-variant font-label-caps text-[10px] rounded-full">Delivered</span>
+</div>
+</div>
+<div class="flex gap-4 overflow-x-auto pb-2">
+<div class="w-20 h-24 flex-shrink-0 bg-surface-container-low rounded-sm overflow-hidden">
+<img alt="Minimalist skincare serum bottle on warm beige background" class="w-full h-full object-cover grayscale-[20%] mix-blend-multiply" data-alt="Minimalist skincare serum bottle on warm beige background with soft natural lighting and subtle shadows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA3-eiF9vlX7V06kNeaGUfs47-oDfnmw3QBTjAK2FykxCswDU4Dp9LQtLmZdAPKfzMvnBm_KkKP9-d0WkDBaI_D75PON1jc4PVNkNzXMroBvrnzEkgyTVw4QOqW6eSzc3baFoRHdyYK1zw4wx36Ewujs1nbACzCS_wjC84iSUn9InFYyjbomI0tm823HG80Qf7Nva94qk3BQFXEjvXycYSfzqugOfUyBoWsiiKj9uz5PimztKsOjkP0DRM4WHGq0-lq2WKk8cq8VUE"/>
+</div>
+<div class="w-20 h-24 flex-shrink-0 bg-surface-container-low rounded-sm overflow-hidden">
+<img alt="Luxury face cream jar on textured stone surface" class="w-full h-full object-cover grayscale-[20%] mix-blend-multiply" data-alt="Luxury face cream jar on textured stone surface with warm sunlight and minimalist aesthetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAGhagLXA8_FAMNkoQ2eyzbeAUnLQSbaujOOR1eNun42Js0uPpbbPGF4r1JH83Lw4x4YRpycvWV0VLPM4UIeZ1EaDJBIwW_Q9Ga3U_h4TxKlgyLNyS77agDr2q2v_ApDfaIUX5aisQdSx16Mr67QkfEcTlTxugVFj0YTH7CxPN4o6NbFDNNU3EBXMvpzQuRJmL2kOAN8ZZve550z60sy8wu5bZYyR5xqZ3HpWxsRIBd2o2qTypGRhjbAcTlqlKfJk8Dr5993BuiHbQ"/>
+</div>
+</div>
+<div class="flex justify-end pt-4">
+<button class="border border-on-background text-on-background font-cta text-cta uppercase tracking-widest px-6 py-3 hover:bg-on-background hover:text-surface-container-lowest transition-colors duration-300">
+                                View Details
+                            </button>
+</div>
+</div>
+</article>
+<!-- Order Card 2 -->
+<article class="bg-surface-container-lowest rounded-DEFAULT p-8 shadow-[0_10px_30px_rgba(0,0,0,0.03)] border border-surface-variant flex flex-col md:flex-row gap-8 items-start hover:shadow-[0_15px_40px_rgba(0,0,0,0.06)] transition-shadow duration-500 ease-out">
+<div class="flex-grow space-y-6 w-full">
+<div class="flex justify-between items-start border-b border-surface-variant pb-4">
+<div>
+<p class="font-label-caps text-label-caps text-secondary mb-1">Order #AL-84610</p>
+<p class="font-body-sm text-body-sm text-on-background">Placed on September 05, 2023</p>
+</div>
+<div class="text-right">
+<p class="font-headline-md text-headline-md text-on-background">$120.00</p>
+<span class="inline-block mt-2 px-3 py-1 bg-surface-variant text-on-surface-variant font-label-caps text-[10px] rounded-full">Delivered</span>
+</div>
+</div>
+<div class="flex gap-4 overflow-x-auto pb-2">
+<div class="w-20 h-24 flex-shrink-0 bg-surface-container-low rounded-sm overflow-hidden">
+<img alt="Elegant perfume bottle with golden cap" class="w-full h-full object-cover grayscale-[20%] mix-blend-multiply" data-alt="Elegant glass perfume bottle with metallic golden cap on neutral warm background, high-end editorial lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB-4PqDmyTV_72vJCgT5MyZbej3VpRVv_arro009pvzPHFEXZvKxWo9T1GTKO4dEC4-kj8oeGzI4Yq5K5O_vBHQywlt1ZHgBDuEjQWpocC6fNbjSfOqO797MDAe3AduFWc9t29VtvmXaBAvvq1SA3hzfmyF0RJE9VbpUz2Opo3WXyid2XwsHa2QPvXK-7e5rgV5_gpI6QALKv8xrggPKniyX5n9YceOfohWrExMrh8xprGCi8QZZCHEhn0pjSKeOKL6XjMVT-NOwH4"/>
+</div>
+</div>
+<div class="flex justify-end pt-4">
+<button class="border border-on-background text-on-background font-cta text-cta uppercase tracking-widest px-6 py-3 hover:bg-on-background hover:text-surface-container-lowest transition-colors duration-300">
+                                View Details
+                            </button>
+</div>
+</div>
+</article>
+</div>
+<div class="flex justify-center mt-12">
+<button class="font-cta text-cta text-secondary hover:text-on-background border-b border-transparent hover:border-on-background transition-all duration-300 pb-1 uppercase tracking-widest">
+                    Load More Orders
+                </button>
+</div>
+</section>
+</main>
+<!-- Footer Component -->
+<footer class="w-full py-16 px-12 bg-neutral-50 dark:bg-neutral-900 border-t border-neutral-200 dark:border-neutral-800 mt-auto">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 max-w-[1440px] mx-auto">
+<div class="col-span-1 md:col-span-1">
+<span class="font-serif text-xl uppercase tracking-widest text-neutral-800 dark:text-neutral-200 block mb-6">Aura Luxe</span>
+<p class="font-serif text-sm tracking-wide text-neutral-500 dark:text-neutral-400">Quiet luxury for the discerning individual.</p>
+</div>
+<nav class="col-span-1 md:col-span-2 grid grid-cols-2 gap-8">
+<div class="flex flex-col space-y-4">
+<a class="font-serif text-sm tracking-wide text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-100 transition-colors duration-300 ease-in-out" href="#">About Us</a>
+<a class="font-serif text-sm tracking-wide text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-100 transition-colors duration-300 ease-in-out" href="#">Sustainability</a>
+</div>
+<div class="flex flex-col space-y-4">
+<a class="font-serif text-sm tracking-wide text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-100 transition-colors duration-300 ease-in-out" href="#">Shipping &amp; Returns</a>
+<a class="font-serif text-sm tracking-wide text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-100 transition-colors duration-300 ease-in-out" href="#">Contact</a>
+<a class="font-serif text-sm tracking-wide text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-100 transition-colors duration-300 ease-in-out" href="#">Privacy Policy</a>
+</div>
+</nav>
+<div class="col-span-1 md:col-span-1 flex items-end justify-start md:justify-end">
+<p class="font-serif text-sm tracking-wide text-neutral-500 dark:text-neutral-400">© 2024 Aura Luxe. All Rights Reserved.</p>
+</div>
+</div>
+</footer>
+</body></html>
